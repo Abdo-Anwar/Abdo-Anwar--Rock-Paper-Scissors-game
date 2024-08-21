@@ -1,0 +1,155 @@
+.A variable name must start with a letter or the underscore character
+.A variable name cannot start with a number
+.A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+.Variable names are case-sensitive (age, Age and AGE are three different variables)
+.A variable name cannot be any of the Python keywords.
+.To create a global variable inside a function, you can use the global keyword.
+.Also, use the global keyword if you want to change a global variable inside a function.
+
+Built-in Data Types
+
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list [vectoer], tuple(Araay), range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+None Type:	NoneType
+
+Dictionary (dict): A collection of key-value pairs, where each key is unique.
+A frozenset is essentially an immutable version of a set
+
+.Float can also be scientific numbers with an "e" to indicate the power of 10.
+.You can convert from one type to another with the int(), float(), and complex() methods:
+Note: You cannot convert complex numbers into another number type.
+Import the random module, and display a random number between 1 and 9:{
+
+    import random
+print(random.randrange(1, 10))
+}
+
+.The strip() method removes any whitespace from the beginning or the end:
+.The replace() method replaces a string with another string
+.The split() method splits the string into substrings if it finds instances of the separator:
+a = "Hello, World!"
+print(a.split(",")) # returns ['Hello', ' World!']
+
+.But we can combine strings and numbers by using f-strings or the format() method!
+To specify a string as an f-string, simply put an f in front of the string literal, and add curly brackets {} as placeholders for variables and other operations.
+age = 36
+txt = f"My name is John, I am {age}"
+print(txt)  
+
+
+placeholder f {}
+A modifier is included by adding a colon : followed by a legal formatting type, like .2f 
+which means fixed point number with 2 decimals:
+price = 59
+txt = f"The price is {price:.2f} dollars"
+print(txt) :The price is 59.00 dollars
+A placeholder can contain Python code, like math operations:
+
+
+\'	Single Quote	
+\\	Backslash	
+\n	New Line	
+\r	Carriage Return	
+\t	Tab	
+\b	Backspace	
+\f	Form Feed	
+\ooo	Octal value	
+\xhh	Hex value
+
+Method	Description
+capitalize()	Converts the first character to upper case
+casefold()	Converts string into lower case
+center()	Returns a centered string
+count()	Returns the number of times a specified value occurs in a string
+encode()	Returns an encoded version of the string
+endswith()	Returns true if the string ends with the specified value
+expandtabs()	Sets the tab size of the string
+find()	Searches the string for a specified value and returns the position of where it was found
+format()	Formats specified values in a string
+format_map()	Formats specified values in a string
+index()	Searches the string for a specified value and returns the position of where it was found
+isalnum()	Returns True if all characters in the string are alphanumeric
+isalpha()	Returns True if all characters in the string are in the alphabet
+isascii()	Returns True if all characters in the string are ascii characters
+isdecimal()	Returns True if all characters in the string are decimals
+isdigit()	Returns True if all characters in the string are digits
+isidentifier()	Returns True if the string is an identifier
+islower()	Returns True if all characters in the string are lower case
+isnumeric()	Returns True if all characters in the string are numeric
+isprintable()	Returns True if all characters in the string are printable
+isspace()	Returns True if all characters in the string are whitespaces
+istitle()	Returns True if the string follows the rules of a title
+isupper()	Returns True if all characters in the string are upper case
+join()	Joins the elements of an iterable to the end of the string
+ljust()	Returns a left justified version of the string
+lower()	Converts a string into lower case
+lstrip()	Returns a left trim version of the string
+maketrans()	Returns a translation table to be used in translations
+partition()	Returns a tuple where the string is parted into three parts
+replace()	Returns a string where a specified value is replaced with a specified value
+rfind()	Searches the string for a specified value and returns the last position of where it was found
+rindex()	Searches the string for a specified value and returns the last position of where it was found
+rjust()	Returns a right justified version of the string
+rpartition()	Returns a tuple where the string is parted into three parts
+rsplit()	Splits the string at the specified separator, and returns a list
+rstrip()	Returns a right trim version of the string
+split()	Splits the string at the specified separator, and returns a list
+splitlines()	Splits the string at line breaks and returns a list
+startswith()	Returns true if the string starts with the specified value
+strip()	Returns a trimmed version of the string
+swapcase()	Swaps cases, lower case becomes upper case and vice versa
+title()	Converts the first character of each word to upper case
+translate()	Returns a translated string
+upper()	Converts a string into upper case
+zfill()	Fills the string with a specified number of 0 values at the beginning
+
+. like the isinstance() function, which can be used to determine if an object is of a certain data type:
+
+**	Exponentiation	x ** y	
+//	Floor division	x // y
+
+
+&=	x &= 3	x = x & 3	
+|=	x |= 3	x = x | 3	
+^=	x ^= 3	x = x ^ 3	
+>>=	x >>= 3	x = x >> 3	
+<<=	x <<= 3	x = x << 3
+:=	print(x := 3)	x = 3
+                    print(x)
+
+
+is 	Returns True if both variables are the same object	x is y	
+is not	Returns True if both variables are not the same object	x is not y
+
+& 	AND	Sets each bit to 1 if both bits are 1	x & y	
+|	OR	Sets each bit to 1 if one of two bits is 1	x | y	
+^	XOR	Sets each bit to 1 if only one of two bits is 1	x ^ y
+~	NOT	Inverts all the bits	~x	
+<<	Zero fill left shift	Shift left by pushing zeros in from the right and let the leftmost bits fall off	x << 2
+>>	Signed right shift	Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off	x >> 2
+
+
+.A list can contain different data types:
+Using the list() constructor to make a List: thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+
+
+List is a collection which is ordered and changeable. Allows duplicate members.
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
+The range() function returns a sequence of numbers, starting from 0 by default, 
+and increments by 1 (by default), and ends at a specified number.
+The range() function defaults to increment the sequence by 1,
+however it is possible to specify the increment value by adding a third parameter: range(2, 30, 3):
+
+The else keyword in a for loop specifies a block of code to be executed when the loop is finished:
+Note: The else block will NOT be executed if the loop is stopped by a break statement.
+
+for loops cannot be empty, but if you for some reason have a for loop with no content, put in the pass statement to avoid getting an error.
+
